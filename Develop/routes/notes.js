@@ -54,7 +54,7 @@ notesRouter.delete('/:id', (req, res) => {
         }
     const savedNotes = JSON.parse(data);
     // filters the note IDs in search of the note looking to be deleted, then creates a new array of notes
-        // if note.id !== noteID, then the test passes, and note is added to the array
+        // if note.id !== noteID, then the test passes, and is added to the array
     const newArr = savedNotes.filter(note => note.id !== noteID);
     fs.writeFile(filePath, JSON.stringify(newArr), (err) => {
         if (err) {
