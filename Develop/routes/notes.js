@@ -5,7 +5,7 @@ const path = require('path');
 
 const notesRouter = express.Router();
 
-const filePath = '../Develop/db/db.json';
+const filePath = './db/db.json';
 
 notesRouter.get('/', (req, res) => {
     // const filePath = path.join(__dirname, '..db/db.json');
